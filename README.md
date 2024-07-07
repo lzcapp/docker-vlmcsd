@@ -7,8 +7,19 @@
 ## Info / About this docker
 Docker based in Alpine OS with vlmcsd compiled from "source" (Wind4 GitHub)
 
-## Server Usage:
-> $ docker run -d -p 1688:1688 --restart=always --name vlmcsd mikolatero/vlmcsd
+## Server Usage
+
+### Docker Hub
+
+```shell
+docker run -d -p 1688:1688 --restart=always --name vlmcsd seeleo/vlmcsd
+```
+
+### Container Registry (GitHub)
+
+```shell
+docker run -d -p 1688:1688 --restart=always --name vlmcsd ghcr.io/lzcapp/vlmcsd
+```
 
 ## To view docker log:
 Now (thanks to embii74) vlmcsd process send logs to docker.
