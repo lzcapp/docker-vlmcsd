@@ -6,6 +6,7 @@ RUN apk add --no-cache git make build-base && \
     make
 
 FROM alpine:latest
+COPY --from=builder /root/vlmcsd/bin/vlmcs /vlmcs
 COPY --from=builder /root/vlmcsd/bin/vlmcsd /vlmcsd
 COPY --from=builder /root/vlmcsd/etc/vlmcsd.kmd /vlmcsd.kmd
 RUN apk add --no-cache tzdata
