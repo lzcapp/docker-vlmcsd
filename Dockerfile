@@ -1,4 +1,4 @@
-FROM alpine:latest as builder
+FROM alpine:latest AS builder
 WORKDIR /root
 RUN apk add --no-cache git make build-base && \
     git clone --branch master --single-branch https://github.com/lzcapp/vlmcsd.git && \
